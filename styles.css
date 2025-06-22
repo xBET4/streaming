@@ -1,0 +1,182 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f2027;
+  color: white;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+  z-index: 0;
+  animation: fondoAnimado 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes fondoAnimado {
+  0% { background-position: 0 0; }
+  100% { background-position: 100px 100px; }
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #111;
+  z-index: 1;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+header h1 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+  color: #ffd700;
+}
+
+header p {
+  margin: 5px 0;
+  font-size: 1.1rem;
+}
+
+.garantia {
+  color: #00ff88;
+  font-weight: bold;
+}
+
+.info {
+  padding: 30px 20px;
+  text-align: center;
+  animation: fadeIn 1.5s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.info h2 {
+  color: #ffcc00;
+  margin-bottom: 15px;
+}
+
+.info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.info li {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.mensaje-confianza,
+.extra-texto {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #00ffaa;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+  text-align: center;
+  animation: fadeIn 2s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.cards h2 {
+  grid-column: 1 / -1;
+  color: #ffcc00;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.card {
+  background: #1c1c1c;
+  padding: 25px;
+  border-radius: 15px;
+  transition: transform 0.3s ease, background 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: #333;
+}
+
+.card h3 {
+  margin: 10px 0;
+  font-size: 1.3rem;
+}
+
+.card p {
+  color: #ffd700;
+  font-size: 1.2rem;
+}
+
+.icono {
+  font-size: 2rem;
+  color: #ff3b3f;
+  margin-top: 15px;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 0 10px #25d366;
+  z-index: 100;
+  transition: transform 0.3s ease;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #111;
+  color: #ccc;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-content {
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.footer-content h2 {
+  color: #ffd700;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.footer-content .precio {
+  color: #00ffaa;
+  font-weight: bold;
+}
+
+.footer-content p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
